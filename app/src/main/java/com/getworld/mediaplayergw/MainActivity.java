@@ -13,6 +13,9 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
+import java.io.File;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
@@ -53,6 +56,37 @@ public class MainActivity extends AppCompatActivity {
                 }).check();
 
     }
+
+
+    //encontrar as musicas no diretorio do celular
+    public ArrayList<File> findSong(File file)
+    {
+
+        ArrayList<File> arrayList = new ArrayList<>();
+                File[] files = file.listFiles();
+
+                for(File singleFile : files)
+                {
+                        if(singleFile.isDirectory() && !singleFile.isHidden())
+                        {
+
+                            arrayList.addAll(findSong(singleFile));
+                        }
+                        else
+                        {
+
+                            if (singleFile.getName().endsWith(".mp3") || singleFile.getName().endsWith(".mav"))
+
+                            {
+                                arrayList.add(singleFile);
+                            }
+                        }
+                }
+
+                return arrayList;
+    }
+
+
 
 
 

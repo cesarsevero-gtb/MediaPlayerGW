@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/projetosandroidstudio/MediaPlayerGW/app/src/main/res/drawable/list_bg.xml" value="0.14" />
         <entry key="..\:/projetosandroidstudio/MediaPlayerGW/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/projetosandroidstudio/MediaPlayerGW/app/src/main/res/layout/list_bg.xml" value="0.27291666666666664" />
+        <entry key="..\:/projetosandroidstudio/MediaPlayerGW/app/src/main/res/layout/list_item.xml" value="0.271875" />
       </map>
     </option>
   </component>
